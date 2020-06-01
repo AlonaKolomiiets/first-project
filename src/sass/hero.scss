@@ -1,0 +1,65 @@
+/*HERO*/
+
+.hero {
+  background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9)), url(../images/hero-header/BG-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 186px 0;
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi) {
+      background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9)), url(../images/hero-header/BG@2x-min.jpg);
+  }
+
+  &__container {
+    max-width: 920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 72px;
+    font-weight: 400;
+    color: $base-color-white;
+    text-align: center;
+    margin-bottom: 124px;
+
+    &--decor {
+      @include font($main-font-family, 144px, 700, 1);
+      color: $base-color-white;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+      margin-top: 30px;
+      display: block;
+    }
+  }
+
+  &__link {
+    display: block;
+    border: 3px solid rgb(255, 255, 255);
+    width: 164px;
+    height: 44px;
+    @include font($main-font-family, $main-font-size, 700, $main-line-hight);
+    color: $base-color-white;
+    padding: 12px 28px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+
+      color: $base-color-red;
+      border: 3px solid $base-color-red;
+    }
+  }
+}

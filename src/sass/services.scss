@@ -1,0 +1,56 @@
+/*SERVICES*/
+
+.services-list {
+  @extend %flex-justify;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &__item {
+    flex-basis: 382px;
+    padding-left: 60px;
+    background-repeat: no-repeat;
+    background-position: left 8px top;
+
+    &:not(:nth-last-child(-n+3)) {
+      margin-bottom: 98px;
+    }
+    
+    &--photography {
+      background-image: url(../images/icons/services-list-icons/ALARM1.svg);
+    }
+    
+    &--web-design {
+      background-image: url(../images/icons/services-list-icons/LINE-GRAPH2.svg);
+    }
+    
+    &--creativity {
+      background-image: url(../images/icons/services-list-icons/COMPUTER3.svg);
+    }
+    
+    &--seo {
+      background-image: url(../images/icons/services-list-icons/BOOK4.svg);
+    }
+    
+   &--front-end {
+      background-image: url(../images/icons/services-list-icons/HOME5.svg);
+    }
+    
+    &--digital {
+      background-image: url(../images/icons/services-list-icons/IMAGE6.svg);
+    }
+  }
+}
+
+.services-title {
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.services-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $base-color-light-grey;
+}

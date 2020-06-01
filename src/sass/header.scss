@@ -1,0 +1,126 @@
+/*HEADER*/
+
+.header {
+  position: absolute;
+  width: 100%;
+  padding: 34px 0;
+
+  &__nav {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+
+.logo {
+  @include font($main-font-family, 30px, 700, 36px);
+  color: $base-color-white;
+  animation: 1s linear 1s pulse;
+
+  &:hover {
+    animation-iteration-count: infinite;
+    color: $base-color-yellow;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.menu {
+  @extend %flex-justify;
+  margin-left: auto;
+  margin-right: 50px;
+
+  &__item:not(:last-child) {
+    margin-right: 56px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $base-color-white;
+    position: relative;
+
+    &:hover {
+      color: $base-color-yellow;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      background-color: $base-color-yellow;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      top: 140%;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 500ms linear;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+.widget-list {
+  @extend %flex-justify;
+
+  &__item:first-child {
+    margin-right: 14px;
+  }
+}
+
+
+.widget__btn {
+  fill: $base-color-white;
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+
+  &:hover,
+  &:focus {
+    fill: $base-color-yellow;
+  }
+}
+
+.widget__icon {
+  width: 18px;
+  height: 18px;
+}

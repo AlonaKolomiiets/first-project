@@ -1,0 +1,31 @@
+.section {
+    padding: 44px 0;
+  
+    &__title {
+      
+      @include font($main-font-family, 30px, 700, 36px);
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+  
+      &::after {
+        content: '';
+        background-color: $base-color-red;
+        width: 60px;
+        height: 3px;
+        display: block;
+        margin: 36px auto 0;
+      }
+  
+      &--decor {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        text-transform: none;
+        display: block;
+        margin-bottom: 16px;
+      }
+    }
+  }
+  
